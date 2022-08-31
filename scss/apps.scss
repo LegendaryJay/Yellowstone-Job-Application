@@ -1,0 +1,14 @@
+$primary: #003e7a;
+$nav-tabs-link-active-bg: $primary;
+$nav-tabs-link-active-color: #FFF;
+$nav-tabs-link-hover-border-color: $primary;
+@import "bootstrap";
+body {
+  background-color: $primary;
+}
+#InfoBar{
+  padding: 0;
+  background-color: lighten($primary,65%);
+}
+
+
