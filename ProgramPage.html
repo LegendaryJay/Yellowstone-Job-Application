@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Yellowstone Job</title>
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
     <!--script src="https://kit.fontawesome.com/84c5b245a1.js" crossorigin="anonymous"></script-->
@@ -13,7 +13,7 @@
 <body>
 <nav class="navbar navbar-expand-md navbar-dark bg-dark text-primary" aria-label="navbar">
     <a class="navbar-brand" href="#">
-        <img id="#logo" src="Images/yellowstone-topbar-logo.png" height="40" alt="logo">
+        <img id="#logo" src="Images/yellowstone-topbar-logo.png" height="48" alt="logo">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,7 +60,7 @@
                             </p>
                         </div>
                         <div class="card-footer">
-                            <button class="btn btn-primary"> Apply Now</button>
+                            <button class="btn btn-primary apply-button" id="dining-room-assistant"> Apply Now</button>
                         </div>
                     </div>
                 </div>
@@ -77,7 +77,7 @@
                             </p>
                         </div>
                         <div class="card-footer">
-                            <button class="btn btn-primary"> Apply Now</button>
+                            <button class="btn btn-primary apply-button" id="tour-guid"> Apply Now</button>
                         </div>
                     </div>
                 </div>
@@ -94,7 +94,7 @@
                             </p>
                         </div>
                         <div class="card-footer">
-                            <button class="btn btn-primary"> Apply Now</button>
+                            <button class="btn btn-primary apply-button" id="bar-tender"> Apply Now</button>
                         </div>
                     </div>
                 </div>
@@ -106,7 +106,7 @@
 
 <div class="container" id="formsCard">
     <div class="card shadow p-3 m-3">
-        <button type="button" class="btn btn-primary me-auto"><</button>
+        <button id="back-btn" type="button" class="btn btn-primary me-auto"><</button>
         <ul class="nav nav-tabs" id="myTab" role="tablist">
 
             <li class="nav-item" role="presentation">
@@ -200,8 +200,8 @@
                         <div class="col-md-auto">
                             <label for="state">State</label>
                             <select id="state" class="form-select" aria-label="Default select example">
-                                <option selected>Choose one</option>
-                                <option value="1">WI</option>
+                                <option value="" selected>Choose one</option>
+                                <option value="WI">WI</option>
                             </select>
                         </div>
 
@@ -215,7 +215,7 @@
                     <div class="row py-2">
                         <div class="col-md-6">
                             <select id="country" class="form-select" aria-label="country">
-                                <option selected>Country</option>
+                                <option value="---" selected disabled>Country</option>
                                 <option value="United States of America">America</option>
                             </select>
                         </div>
