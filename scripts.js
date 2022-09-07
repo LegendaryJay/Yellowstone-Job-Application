@@ -5,7 +5,7 @@ $(document).ready(function () {
 
     $('.apply-button').on('click', function () {
         showForms();
-        currentJob = $(this).id;
+        currentJob = this.id;
 
     });
     $('#back-btn').on('click', function () {
@@ -55,13 +55,14 @@ function displaySummary() {
     displayThis("Degree", $('#school-1-degree').val());
     displayThis("Field of Study", $('#school-1-field').val());
     displayThis("Graduated", $('#school-1-graduated').is(':checked') ? 'True' : 'False');
-    displayThis("Other Skills", $('#school-additional-skills'))
+    displayThis("Other Skills", $('#school-additional-skills').val())
     displayNewline()
 
     if ($('#isReferred').is(':checked')) {
         displayThis("Referred by", $('#referred-name').val() + " (" + $('#referred-relationship') + ")")
     }
 
+    displayTitle("Other")
     if ($('#wantsHabitation').is(':checked')) {
         displayThis("", "Wants to live on site");
         displayThis("", $('#wants-rv').is(':checked') ? "Wants to bring RV/Trailer" : "does not want trailer")
@@ -71,6 +72,31 @@ function displaySummary() {
     }
     displayNewline()
 
+    displayThis("Can work in US", $("#can-work").is(':checked') ? "True" : "False")
+    var age = "Under 18 or no comment";
+    if ($("#is-21").is(':checked')){
+        age = "21 or older";
+    } else if ($("#is-18").is(':checked')){
+        age = "18 or older";
+    }
+    displayThis("Age", age)
+    displayNewline();
+
+    if ($('#is-intl').is(':checked')) {
+        displayThis("International Sponsor", $('#sponsoring-agency').val())
+    } else {
+        displayThis("International", "False")
+    }
+
+    displayNewline();
+    if ($('#isFelon').is(':checked')) {
+        displayThis("Felony Description", $('#felon-reason').val())
+    } else {
+        displayThis("Felon", "False")
+    }
+
+    displayNewline()
+    displayThis("Job", currentJob)
 }
 
 
@@ -91,6 +117,9 @@ function displayRow2(value) {
 }
 
 function displayThis(title, value, ignoreValidation) {
+    if (typeof value != "string"){
+        alert(title, value);
+    }
     const value2 = ignoreValidation ? value : (value.trim() === '' ? "---" : value);
     $('#output-confirmation').append("<div class='row'>" + displayRow1(title) + displayRow2(value2) + "</div>")
 }
