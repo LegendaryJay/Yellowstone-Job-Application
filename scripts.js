@@ -58,8 +58,18 @@ function displaySummary() {
     displayThis("Other Skills", $('#school-additional-skills'))
     displayNewline()
 
-    
+    if ($('#isReferred').is(':checked')) {
+        displayThis("Referred by", $('#referred-name').val() + " (" + $('#referred-relationship') + ")")
+    }
 
+    if ($('#wantsHabitation').is(':checked')) {
+        displayThis("", "Wants to live on site");
+        displayThis("", $('#wants-rv').is(':checked') ? "Wants to bring RV/Trailer" : "does not want trailer")
+        displayThis("RV/Trailer Description", $("#rv-desc").val())
+    } else {
+        displayThis("", "Does not want to live on site")
+    }
+    displayNewline()
 
 }
 
