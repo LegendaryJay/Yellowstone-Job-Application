@@ -12,8 +12,32 @@ $(document).ready(function () {
         showJobs();
 
     });
-    $('#toConfirmation').on('click', function () {
-        $("#nav-confirmation-tab").tab('show')
+    $('#to-employment').on('click', function () {
+        $("#employment-tab").tab('show')
+
+    });
+    $('#to-education').on('click', function () {
+        $("#education-tab").tab('show')
+
+    });
+    $('#to-other').on('click', function () {
+        $("#other-tab").tab('show')
+
+    });
+    $('#to-legal').on('click', function () {
+        $("#legal-tab").tab('show')
+
+    });
+    $('#to-terms').on('click', function () {
+        $("#terms-tab").tab('show')
+
+    });
+    $('#to-sum').on('click', function () {
+        $("#summary-tab").tab('show')
+
+    });
+    $('#to-survey').on('click', function () {
+        $("#survey-tab").tab('show')
 
     });
 
