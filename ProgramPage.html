@@ -44,7 +44,7 @@
     </div>
 </nav>
 
-<div class="container">
+<div class="container" id="jobsCard">
     <div class="col-md-auto card shadow p-3 m-3">
         <div class="container">
             <div class="row">
@@ -104,7 +104,7 @@
     </div>
 </div>
 
-<div class="container">
+<div class="container" id="formsCard">
     <div class="card shadow p-3 m-3">
         <button type="button" class="btn btn-primary me-auto"><</button>
         <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -383,17 +383,16 @@
                     </div>
                     <div class="row py-2">
                         <div class="col-md">
-                            <label class="form-check-label" for="flexSwitchCheckDefault">Graduated</label>
+                            <label class="form-check-label" for="school-1-graduated">Graduated</label>
                             <input class="form-check-input" type="checkbox" id="school-1-graduated">
                         </div>
                     </div>
-
                     <button type="button" class="btn btn-outline-primary mb-2 py-2 w-100">+ Add Education</button>
                     <hr>
                     <div class="row py-2">
                         <div class="col-md">
-                            <label for="colFormLabelSm">Additional Skills</label>
-                            <textarea type="text" class="form-control" placeholder=""></textarea>
+                            <label for="school-additional-skills">Additional Skills</label>
+                            <textarea id="school-additional-skills" type="text" class="form-control" placeholder=""></textarea>
                         </div>
                     </div>
 
@@ -407,18 +406,20 @@
                         <div class="col-md">
                             <div class="form-check form-switch">
                                 <input class="form-check-input" type="checkbox" role="switch"
-                                       id="flexSwitchCheckDefault">
-                                <label class="form-check-label" for="flexSwitchCheckDefault">Were you recommended by
+                                       id="isReferred">
+                                <label class="form-check-label" for="isReferred">Were you recommended by
                                     someone?</label>
                             </div>
                         </div>
                     </div>
                     <div class="row py-2">
                         <div class="col-md">
-                            <input type="text" class="form-control" placeholder="Name">
+                            <label for="referred-name">Employee Name</label>
+                            <input id="referred-name" type="text" class="form-control" placeholder="John Doe">
                         </div>
                         <div class="col-md">
-                            <input type="text" class="form-control" placeholder="Relationship">
+                            <label for="referred-relationship">Relationship</label>
+                            <input id="referred-relationship" type="text" class="form-control" placeholder="e.g. sister, friend, parent">
                         </div>
                     </div>
                     <hr>
@@ -427,8 +428,8 @@
                         <div class="col-md">
                             <div class="form-check form-switch">
                                 <input class="form-check-input" type="checkbox" role="switch"
-                                       id="flexSwitchCheckDefault">
-                                <label class="form-check-label" for="flexSwitchCheckDefault">Do you plan on living on
+                                       id="wantsHabitation">
+                                <label class="form-check-label" for="wantsHabitation">Do you plan on living on
                                     site?
                                     (Must be 18+)</label>
                             </div>
@@ -438,20 +439,16 @@
                         <div class="col-md">
                             <div class="form-check form-switch">
                                 <input class="form-check-input" type="checkbox" role="switch"
-                                       id="flexSwitchCheckDefault">
-                                <label class="form-check-label" for="flexSwitchCheckDefault">Do you plan on living in an
+                                       id="wants-rv">
+                                <label class="form-check-label" for="wants-rv">Do you plan on living in an
                                     RV/Trailer?</label>
                             </div>
                         </div>
                     </div>
                     <div class="row py-2">
                         <div class="col-md">
-                            <input type="text" class="form-control" placeholder="Name">
-                        </div>
-                    </div>
-                    <div class="row py-2">
-                        <div class="col-md">
-                            <input type="text" class="form-control" placeholder="Trailer Description">
+                            <label for="rv-desc">RV/Trailer Description</label>
+                            <input id="rv-desc" type="text" class="form-control" placeholder="">
                         </div>
                     </div>
                     <button type="button" class="btn btn-primary mb-2 py-2">Next</button>
@@ -465,8 +462,8 @@
                         <div class="col-md">
                             <div class="form-check form-switch">
                                 <input class="form-check-input" type="checkbox" role="switch"
-                                       id="flexSwitchCheckDefault">
-                                <label class="form-check-label" for="flexSwitchCheckDefault">Are you eligable to work in
+                                       id="can-work">
+                                <label class="form-check-label" for="can-work">Are you eligable to work in
                                     the US?</label>
                             </div>
                         </div>
@@ -475,9 +472,8 @@
                         <div class="col-md">
                             <div class="form-check form-switch">
                                 <input class="form-check-input" type="checkbox" role="switch"
-                                       id="flexSwitchCheckDefault">
-                                <label class="form-check-label" for="flexSwitchCheckDefault">Are you over 17 years of
-                                    age</label>
+                                       id="is-18">
+                                <label class="form-check-label" for="is-18">Are you 18 or older?</label>
                             </div>
                         </div>
                     </div>
@@ -485,9 +481,8 @@
                         <div class="col-md">
                             <div class="form-check form-switch">
                                 <input class="form-check-input" type="checkbox" role="switch"
-                                       id="flexSwitchCheckDefault">
-                                <label class="form-check-label" for="flexSwitchCheckDefault">Are you over 20 years of
-                                    age</label>
+                                       id="is-21">
+                                <label class="form-check-label" for="is-21">Are you 21 or older?</label>
                             </div>
                         </div>
                     </div>
@@ -496,21 +491,21 @@
                         <div class="col-md">
                             <div class="form-check form-switch">
                                 <input class="form-check-input" type="checkbox" role="switch"
-                                       id="flexSwitchCheckDefault">
-                                <label class="form-check-label" for="flexSwitchCheckDefault">Are you an international
+                                       id="is-intl">
+                                <label class="form-check-label" for="is-intl">Are you an international
                                     applicant?</label>
                             </div>
                         </div>
                     </div>
                     <div class="row py-2">
                         <div class="col-md-auto">
-                            <select class="form-select" aria-label="Default select example">
+                            <select id="sponsoring-agency" class="form-select" aria-label="sponsoring-agency">
                                 <option selected>Sponsering Agency</option>
-                                <option value="1">Aspire</option>
-                                <option value="2">CIEE</option>
-                                <option value="3">CCUSA</option>
-                                <option value="4">InterExchange</option>
-                                <option value="5">None of the above</option>
+                                <option value="Aspire">Aspire</option>
+                                <option value="CIEE">CIEE</option>
+                                <option value="CCUSA">CCUSA</option>
+                                <option value="InterExchange">InterExchange</option>
+                                <option value="None">None of the above</option>
                             </select>
                         </div>
                     </div>
@@ -519,16 +514,16 @@
                         <div class="col-md">
                             <div class="form-check form-switch">
                                 <input class="form-check-input" type="checkbox" role="switch"
-                                       id="flexSwitchCheckDefault">
-                                <label class="form-check-label" for="flexSwitchCheckDefault">Have you been convicted of
+                                       id="isFelon">
+                                <label class="form-check-label" for="isFelon">Have you been convicted of
                                     a felony? </label>
                             </div>
                         </div>
                     </div>
                     <div class="row py-2">
                         <div class="col-md">
-                            <label for="colFormLabelSm">Details</label>
-                            <textarea type="text" class="form-control" placeholder=""></textarea>
+                            <label for="felon-reason">Details</label>
+                            <textarea id="felon-reason" type="text" class="form-control" placeholder=""></textarea>
                         </div>
                     </div>
 
@@ -537,10 +532,10 @@
                 </form>
             </div>
             <div class="tab-pane fade" id="terms" role="tabpanel" aria-labelledby="home-tab">
-                <div class="jumbotron jumbotron-fluid">
-                    <div class="container">
-                        <h1 class="h1 text-primary">Terms and Conditions</h1>
-                        <p class="lead text-justify">
+                <div class="card m-5">
+                    <div class="card-body">
+                        <h5 class="h1 text-primary card-title">Terms and Conditions</h5>
+                        <p class="card-text px-5">
                             By submitting this form, I declare my answers to the questions on this application are true
                             and
                             accurate. I authorize Xanterra Parks and Resorts and any accredited public or private
@@ -563,10 +558,13 @@
                             without cause, at any time.
                         </p>
                     </div>
-                    <a class="btn btn-primary mx-auto" href="#" role="button">I Agree</a>
+                    <a class="btn btn-primary mx-auto mb-3" href="#" role="button">I Agree</a>
                 </div>
             </div>
             <div class="tab-pane fade" id="summary" role="tabpanel" aria-labelledby="home-tab">
+                <div id="output-confirmation">
+
+                </div>
                 <button type="button" class="btn btn-primary mb-2 py-2">Confirm</button>
             </div>
             <div class="tab-pane fade" id="survey" role="tabpanel" aria-labelledby="home-tab">
@@ -575,11 +573,11 @@
                     <div class="row py-2">
                         <div class="col-md-auto">
                             <label>How did you hear of us?</label>
-                            <select class="form-select" aria-label="Default select example">
+                            <select id="hear-about" class="form-select" aria-label="How did you hear of us?">
                                 <option selected>Choose one</option>
-                                <option value="1">Job Board</option>
-                                <option value="1">Friend</option>
-                                <option value="1">Other</option>
+                                <option value="Job board">Job Board</option>
+                                <option value="Friend">Friend</option>
+                                <option value="Other">Other</option>
                             </select>
                         </div>
                     </div>
@@ -587,23 +585,23 @@
                     <div class="form-group">
                         <div class="form-check">
 
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="hispanic-yes"
                                    value="option1">
-                            <label class="form-check-label" for="exampleRadios1">
+                            <label class="form-check-label" for="hispanic-yes">
                                 Yes
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="hispanic-no"
                                    value="option2">
-                            <label class="form-check-label" for="exampleRadios2">
+                            <label class="form-check-label" for="hispanic-no">
                                 No
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="hispanic-na"
                                    value="option2 checked">
-                            <label class="form-check-label" for="exampleRadios2">
+                            <label class="form-check-label" for="hispanic-na">
                                 Prefer not to answer
                             </label>
                         </div>
@@ -613,44 +611,44 @@
                         Ethnicity
                         <div class="form-check">
 
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="ethnic-white"
                                    value="option1">
-                            <label class="form-check-label" for="exampleRadios1">
+                            <label class="form-check-label" for="ethnic-white">
                                 White
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="ethnic-black"
                                    value="option2">
-                            <label class="form-check-label" for="exampleRadios2">
+                            <label class="form-check-label" for="ethnic-black">
                                 Black or African American
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="ethnic-islander"
                                    value="option2">
-                            <label class="form-check-label" for="exampleRadios2">
+                            <label class="form-check-label" for="ethnic-islander">
                                 Native Hawaiian or Other Pacific Islander
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="ethnic-asian"
                                    value="option2">
-                            <label class="form-check-label" for="exampleRadios2">
+                            <label class="form-check-label" for="ethnic-asian">
                                 Asian
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="ethnic-n-indian"
                                    value="option2">
-                            <label class="form-check-label" for="exampleRadios2">
+                            <label class="form-check-label" for="ethnic-n-indian">
                                 American Indian or Alaska Native
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="ethnic-na"
                                    value="option2" checked>
-                            <label class="form-check-label" for="exampleRadios2">
+                            <label class="form-check-label" for="ethnic-na">
                                 Prefer not to answer
                             </label>
                         </div>
@@ -663,6 +661,8 @@
 </div>
 
 <script src="dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="scripts.js"></script>
 
 </body>
 
