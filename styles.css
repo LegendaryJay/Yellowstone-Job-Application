@@ -12,3 +12,10 @@ body {
     margin-bottom: 10px;
 }
 
+.job-posting {
+    padding: 10px 15px;
+}
+
+.job-posting-card {
+    height: 220px;
+}
